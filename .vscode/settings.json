@@ -21,5 +21,7 @@
                 "xelatex"
             ]
         }
-    ]
+    ],
+    "latex-workshop.intellisense.file.base": "both",
+    "editor.wordWrap": "on"
 }

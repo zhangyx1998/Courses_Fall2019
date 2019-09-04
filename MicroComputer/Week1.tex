@@ -1,4 +1,5 @@
 \section*{微机原理与接口技术第一次作业}
+    \setcounter{section}{1}
     \vspace{-5pt}\subsubsection*{张宇轩 2160909016}
     \vspace{-10pt}\noindent\rule{\textwidth}{0.1pt}
     \vspace{-30pt}
@@ -54,7 +55,7 @@
             
             手机的工具属性只是对传统工具的集成，虽然提升了这些工具的便携性和易用性，但是并没有对它们的功能做出本质改变。
 
-            而手机的娱乐属性也是一样，手机游戏利用“即时反馈”给玩家带来快乐（刺激）的原理，和电脑游戏、传统棋牌游戏甚至赌博游戏没有本质区别。手机只是作为游戏的载体，并没有对游戏的根本属性做出改变。
+            而手机的娱乐属性也是一样，手机游戏利用“低成本即时反馈”给玩家带来快乐（刺激）的原理，和电脑游戏、传统棋牌游戏甚至赌博游戏所利用的心理学原理没有本质区别。手机只是作为游戏的载体，并没有对游戏的根本属性做出改变。
 
             因此，对这部分内容，在此不作讨论。
 
@@ -62,14 +63,111 @@
         \subsubsection*{行为与动机}
             在讨论兴趣与学习之前，有必要对行为与动机的联系进行更普适的讨论。通过对于一些心理和逻辑上的问题的思考，我们可以更加深刻地认识兴趣与学习的关系。
             
-            首先，任何（理智的人的）行为必然对应一个动机，而动机的本质是获得某种反馈。“反馈”指的是那些可以实在的令人产生（生理或心理的）愉悦感的事件的集合。我们尝试对这一命题进行论证。
+            首先，任何（理智的人的）行为必然对应一个动机，而动机的本质是获得某种反馈。“反馈”指的是那些可以实在的令人产生（生理或心理的）愉悦感的事件的集合。而这种心理上的对于“反馈”的需求，构成了一个理性人的完整的行为逻辑，即动机。
 
-            直觉上，这一命题并不适用于所有情况，尤其是一些非自愿的行为。例如
+            由常理不难推断，一件事情（行为）的正面反馈越强，则动机越强，则执行此任务时的专注性和积极性就越强。
         
         \subsubsection*{逻辑链和延迟反馈}
+            然而，在当代现实生活中，大部分日常工作并不直接对应一个“反馈”，甚至有些行为还会给我们带来（生理或心理的）负面体验。例如我们每天听课、写作业并不对应一个实际的反馈（奖励），反而会让我们身心疲惫。但是大部分人并不会因此拒绝听课或完成作业，这似乎和前文所述相矛盾。
 
-        \subsubsection*{非等价交换和估计偏差}
+            为了解决上述问题，我们假定“完成学业”为最终反馈（奖励），那么我们会发现，“完成当日作业”这一行为和最终反馈有如下关系：
+            
+            \begin{center}
+                \tikzstyle{unitbox} = [rectangle,rounded corners, minimum width=2cm,minimum height=0.74cm,text centered, draw=black,fill=none]
+                \tikzstyle{caption} = [rectangle,text centered, draw=none,fill=none]
+                \tikzstyle{arrow} = [thick,->,>=stealth]
+                \tikzstyle{link}  = [thin,<-,>=stealth]
+                \begin{tikzpicture}[node distance=3cm]
+                    \node (n1) [unitbox] {听课/作业};
+                    \node (n2) [unitbox,right of=n1] {获得知识};
+                    \node (n3) [unitbox,right of=n2] {通过考试};
+                    \node (n4) [unitbox,right of=n3] {获得学分};
+                    \node (n5) [unitbox,right of=n4] {完成学业};
+                    \draw [arrow] (n1) -- (n2);
+                    \draw [arrow] (n2) -- (n3);
+                    \draw [arrow] (n3) -- (n4);
+                    \draw [arrow] (n4) -- (n5);
+                    \node (c1) [caption,below of=n1,yshift=60pt] {行为};
+                    \node (c1a)[caption,below of=c1,yshift=70pt] {含有负面体验};
+                    \node (c2) [caption,below of=n2,yshift=60pt] {直接结果};
+                    \node (c2a)[caption,below of=c2,yshift=70pt] {不产生正面反馈};
+                    \node (c5) [caption,below of=n5,yshift=60pt] {最终结果};
+                    \node (c2a)[caption,below of=c5,yshift=70pt] {间接作用于行为};
+                    \draw [link] (n1) -- (c1);
+                    \draw [link] (n2) -- (c2);
+                    \draw [link] (n5) -- (c5);
 
-        \subsubsection*{虚拟化反馈和自我奖励机制}
+                \end{tikzpicture}
+            \end{center}
 
-        \subsubsection*{人的理性思维局限}
+            任何一个具备基本逻辑思维能力（即理性）的人都能本能地认识到听课、写作业（行为）与完成学业（最终）反馈之间的联系，所以听课、写作业这些表面上不产生有效反馈的行为依旧可以被执行。这种“行为”与反馈间接相关的现象被一部分人称为“延迟反馈”，而某个人执行这类（不产生直接反馈的）任务的能力被称为“延迟反馈能力”。
+
+        \subsubsection*{人为反馈和自我奖励机制}
+            上文所述例子已经展现了间接（延迟）反馈的原理，一个理论上完全理性的人应当可以完美遵循以上逻辑。可惜的是，现实中并不存在这种完全理性的人，甚至我们中的大多数人遵循自身理性思维指导的比例都很低。因此，在现实中，最终反馈对具体行为的激励作用是沿逻辑链逐级衰减的，同时也是随时间跨度递减的。
+            
+            也就是说，一条完整反馈链的逻辑越复杂、时间跨度越长，它的每一步执行起来就越困难。
+
+            \pagebreak
+
+            那么，那些“延迟反馈”能力强的人，是如何克服这种现象的呢？答案就是人为创造直接作用在每一步“具体行为”上的“人为反馈”：
+            
+            \begin{center}
+                \tikzstyle{unitbox} = [rectangle,rounded corners, minimum width=2cm,minimum height=0.74cm,text centered, draw=black,fill=none]
+                \tikzstyle{caption} = [rectangle,text centered, draw=none,fill=none]
+                \tikzstyle{arrow} = [thick,->,>=stealth]
+                \tikzstyle{link}  = [thin,<-,>=stealth]
+                \begin{tikzpicture}[node distance=3cm]
+                    \node (n1) [unitbox] {听课/作业};
+                    \node (n2) [unitbox,right of=n1,yshift=1cm] {获得知识};
+                    \node (n3) [unitbox,right of=n2] {通过考试};
+                    \node (n4) [unitbox,right of=n3] {获得学分};
+                    \node (n5) [unitbox,right of=n4] {完成学业};
+                    \draw [arrow] (n1) -- (n2);
+                    \draw [arrow] (n2) -- (n3);
+                    \draw [arrow] (n3) -- (n4);
+                    \draw [arrow] (n4) -- (n5);
+                    \node (s2) [unitbox,below of=n2,yshift=1cm] {自我奖励};
+                    \draw [arrow] (n1) -- (s2);
+                    \node (c1) [caption,below of=n1,yshift=60pt] {行为};
+                    \node (c2) [caption,below of=n2,yshift=60pt] {直接结果};
+                    \node (c5) [caption,below of=n5,yshift=60pt] {最终结果};
+                    \draw [link] (n1) -- (c1);
+                    \draw [link] (n2) -- (c2);
+                    \draw [link] (n5) -- (c5);
+                    \node (cs2) [caption,right of=s2,xshift=20pt] {反馈直接作用于具体行为};
+                    \draw [link] (s2) -- (cs2);
+
+                \end{tikzpicture}
+            \end{center}
+
+            上图所示的“自我奖励”可以是根据短期计划完成情况安排的休息、用餐，也可以是对自己的某种具体的物质奖励。一种特殊的奖励方式就是“精神上的奖励”，也就是对于完成一项任务或者收获一种知识的成就感。这种成就感可以由个人对一个学科/领域的兴趣产生，也可以由完成计划本身产生，甚至可以是两者的叠加。
+
+            强烈而直接的人为正面反馈会提升完成任务的速度和质量，从而在兴趣和计划性两方面构建起良性循环。
+
+            至此，“兴趣与学习”的问题已经在推论过程中基本阐明，这一推论同时揭示了合理制定计划、构建正面反馈机制对于学习和人生的重大意义。
+
+        \subsubsection*{估计偏差}
+
+            以上反馈模型中用到了一项假设：我们总是可以正确估计一件事的难度（执行过程中的负面体验）和完成一件事的意义（最终结果伴随的正面反馈）。这在现实生活中是不准确的。
+
+            事实上，我们大多数人倾向于低估一件事执行的难度，并夸大一件事最终完成后的正面体验，甚至会在任务完成前尽可能地“提前消费”其正面反馈。这种现象会导致良性的正面反馈循环无法建立，甚至会倒向另一个极端————恶性循环。
+
+            这一问题十分现实，也十分棘手。我个人暂时没有很好的解决办法。
+
+        \subsubsection*{自洽性}
+
+            我在为阐释“兴趣与学习”而建立的这个模型中，通篇没有提及“自制力”在逻辑链中扮演的角色。这不代表本文所建立的模型无法自洽。因为在本模型中，发挥自制力的过程可以被等价为提前消费“最终正面反馈”来抵消当下“负面体验”的行为。它们本质上是等价的。而上文已经提到，提前消费最终正面反馈的行为是不恰当的、危险的。
+
+            有相关心理学实验证明，自制力不是恒定的。一个人使用自制力的过程同时也是消耗自制力的过程。这一结论与本文模型相符。
+
+            换言之，（理想情况下）通过正确构建兴趣体系和计划体系，设置合理的、足够的人为反馈，我们不需要所谓“自制力”参与日常生活。
+
+        \vspace{2cm}
+
+        \hfill \textbf{感谢老师耐心阅读!}
+ 
+        \hfill \textbf{张宇轩}
+ 
+        \hfill \textbf{2160909016}
+        
+        \hfill \textbf{\today}
