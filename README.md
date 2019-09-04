@@ -1,3 +1,5 @@
+![Project Cover](Reference/Resources/Cover.svg)
+
 # Courses Aug-2019
 ---
 
