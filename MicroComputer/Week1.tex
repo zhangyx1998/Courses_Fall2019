@@ -1,0 +1,75 @@
+\section*{微机原理与接口技术第一次作业}
+    \vspace{-5pt}\subsubsection*{张宇轩 2160909016}
+    \vspace{-10pt}\noindent\rule{\textwidth}{0.1pt}
+    \vspace{-30pt}
+    \subsection{思考：“手机带给我们的”}
+        \subsubsection*{社会层面}
+            在智能手机面世以前，手机的功能仅限于拨打电话和发送短信，也就是基本通信功能。手机提供的基本通信功能是维持现代社会高效运转的一大基础，它让社会成员的联系从局限的面对面的交流拓展到了随时、随地的联系和沟通。需要注意的是，手机的基本通信功能带来的这一进步对社会的影响比字面上看起来的大得多。如下图所示，它使得社会成员之间的沟通效率大幅提高，从而为人与人之间组织协作的效率带来了数量级上的提升。
+            \vspace{20pt}
+            \begin{quotation}
+                \tikzstyle{unitbox} = [rectangle,rounded corners, minimum width=2cm,minimum height=0.74cm,text centered, draw=black,fill=none]
+                \tikzstyle{arrow} = [thick,->,>=stealth]
+                \tikzstyle{arrow_ds} = [thick,<->,>=stealth]
+
+                \noindent\begin{tabularx}{\linewidth}{AA}
+                    \begin{tikzpicture}[node distance=1.5cm]
+                        \node (org) [unitbox] {组织/单位};
+                        \node (indv1) [unitbox,below of=org,xshift=-4em] {成员};
+                        \node (indv2) [unitbox,below of=org,xshift=+4em] {成员};
+                        \draw [arrow_ds] (org) -- (indv1);
+                        \draw [arrow_ds] (org) -- (indv2);
+                    \end{tikzpicture}
+                    \begin{quotation}
+                        没有实时通讯工具的情况下，组织成员间必须通过某种中介来互相沟通，或者必须在特定的时间、地点进行沟通。信息无法即时传递，也无法直接传递。
+                    \end{quotation}
+                    &
+                    \begin{tikzpicture}[node distance=1.5cm]
+                        \node (org) [unitbox] {组织/单位};
+                        \node (indv1) [unitbox,below of=org,xshift=-4em] {成员};
+                        \node (indv2) [unitbox,below of=org,xshift=+4em] {成员};
+                        \draw [arrow_ds] (org) -- (indv1);
+                        \draw [arrow_ds] (org) -- (indv2);
+                        \draw [arrow_ds] (indv1) -- (indv2);
+                    \end{tikzpicture}
+                    \begin{quotation}
+                        装备实时通讯工具后，组织成员之间的交流协作不再需要限定时间、地点，在任意时间任意地点都可以与每个取得联系。交流的效率被大大提升了。
+                    \end{quotation}
+                    \\
+                \end{tabularx}
+            \end{quotation}
+            而移动操作系统和互联网的诞生则为手机增添了另一层面的功能：信息获取和群体社交功能。基础通信功能提供了“点对点”的交流渠道，而基于互联网的新智能平台提供了“点对面”的传播功能和“面到点”的信息获取功能。
+            
+            这一变化的意义在于，它“拍扁了”传统的社会层级结构，信息与知识的传播不再需要经过一个中心节点（如电视台、报纸、教科书）。每个个体可以直接为社群贡献信息（知识），也可以通过搜索和智能推荐技术方便快速地从社群获取信息（知识）。信息流转的效率和范围都有了巨大的提高。同时，它打破了原有的“熟人社交”模式，将人们按照兴趣爱好、职业特长、年龄段等要素组织起来，创造了新的、基于“群像”的社交模式。
+            
+            这种高度“扁平化”的高效交流模式和大脑中的神经元如此类似，甚至可以在一定的群体中产生“集体智慧”。
+
+        \subsubsection*{个人层面}
+            相比智能设备给社会带来的巨大进步，智能手机对个人的影响就未必那么正面了。由于个体的差异性，这种影响不能一概而论，只能进行基于统计（观察）的抽象概括。
+
+            固然，个体以智能设备作为入口，在互联网世界中获得极大的好处。但是，网络世界信息的获取如此简单，以至于一部分人因此丧失了独立思考、处理问题的能力。同时，大量信息的涌入极有可能导致我们无法专注于一件事情。我们大脑虽然非常强大，但是并不擅长在多个任务之间来回跳跃，就像老式的单线程操作系统。同时抵达手机的大量信息反而会导致我们处理事情的效率大幅降低。
+        %\pagebreak
+
+        \subsubsection*{工具属性和娱乐属性}
+            您可能已经注意到，我在上面两个部分没有提到手机的工具属性（如计算器）和娱乐属性（游戏、视频播放等）。这是因为，这两部分属性并不是手机所特有的。
+            
+            手机的工具属性只是对传统工具的集成，虽然提升了这些工具的便携性和易用性，但是并没有对它们的功能做出本质改变。
+
+            而手机的娱乐属性也是一样，手机游戏利用“即时反馈”给玩家带来快乐（刺激）的原理，和电脑游戏、传统棋牌游戏甚至赌博游戏没有本质区别。手机只是作为游戏的载体，并没有对游戏的根本属性做出改变。
+
+            因此，对这部分内容，在此不作讨论。
+
+    \subsection{思考：“兴趣与学习”}
+        \subsubsection*{行为与动机}
+            在讨论兴趣与学习之前，有必要对行为与动机的联系进行更普适的讨论。通过对于一些心理和逻辑上的问题的思考，我们可以更加深刻地认识兴趣与学习的关系。
+            
+            首先，任何（理智的人的）行为必然对应一个动机，而动机的本质是获得某种反馈。“反馈”指的是那些可以实在的令人产生（生理或心理的）愉悦感的事件的集合。我们尝试对这一命题进行论证。
+
+            直觉上，这一命题并不适用于所有情况，尤其是一些非自愿的行为。例如
+        
+        \subsubsection*{逻辑链和延迟反馈}
+
+        \subsubsection*{非等价交换和估计偏差}
+
+        \subsubsection*{虚拟化反馈和自我奖励机制}
+
+        \subsubsection*{人的理性思维局限}
