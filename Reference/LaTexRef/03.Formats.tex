@@ -1,0 +1,37 @@
+% This file shows basic formatting commands
+\documentclass{report}
+\usepackage{geometry}
+\geometry{a4paper,left=3cm,right=3cm,top=2cm,bottom=2cm}
+\begin{document}
+    \section*{\huge Create a custom title for a report or book}
+    \addtocounter{section}{1}
+    \vspace{-10pt}\noindent\rule{\textwidth}{0.1pt}\vspace{10pt}
+
+    The title page of a book or a report is the first thing a reader will see. Keep that in mind when preparing your title page.
+    
+    You need to know very basic LaTeX layout commands in order to get your own title page perfect. Usually a custom titlepage does not contain any semantic markup, everything is hand crafted. Here are some of the most often needed things:
+    
+        \subsection{Alignment}
+
+            If you want to center some text just use \textbf{$\backslash$centering}.
+            
+            If you want to align it differently you can use the environment \textbf{$\backslash$raggedleft} for right-alignment and \textbf{$\backslash$raggedright} for left-alignment.
+
+            Another trick is to use the \textbf{$\backslash$hfill}. It automatically insert white space to where it is, and is makes sure that the inserted white space makes the line span the page width.
+
+        \subsection{Images}
+
+            The command for including images (a logo for example) is the following : \textbf{$\backslash$includegraphics}[width=0.15\textbf{$\backslash$textwidth}]\{./logo\}. There is no \textbf{$\backslash$begin}\{figure\} as you would usually use since you don't want it to be floating, you just want it exactly where want it to be. When handling it, remember that it is considered like a big box by the \TeX{} engine.
+
+        \subsection{Text size}
+
+            If you want to change the size of some text just place it within braces, \{like this\}, and you can use the following commands (in order of size): \textbf{$\backslash$Huge}, \textbf{$\backslash$huge}, \textbf{$\backslash$LARGE}, \textbf{$\backslash$Large}, \textbf{$\backslash$large}, \textbf{$\backslash$normalsize}, \textbf{$\backslash$small}, \textbf{$\backslash$footnotesize}, \textbf{$\backslash$tiny}. So for example:
+
+            \{\textbf{$\backslash$large} this text is slightly bigger than normal\}, this one is not.
+            Remember, if you have a block of text in a different size, even if it is a bit of text on a single line, end it with \textbf{$\backslash$par}.
+
+        \subsection{Filling the page}
+
+            The command \textbf{$\backslash$vfill} as the last item of your content will add empty space until the page is full. If you put it within the page, you will ensure that all the following text will be placed at the bottom of the page.
+
+\end{document}
