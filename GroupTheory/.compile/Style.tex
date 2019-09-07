@@ -1,0 +1,51 @@
+% overall settings
+\documentclass{article}
+
+% pdf page geomentry settings
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% set global font
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Times}
+\setsansfont[Ligatures=TeX]{Arial}
+
+% Ctex section format
+\usepackage{titlesec}
+\titleformat
+    % titleformat TARGET
+    {\section}
+    % Format of the LABEL
+    {\LARGE\bfseries}
+    % Contents of the labLABELel
+    {Week \thesection}
+    % Horizontal distence between LABEL and Title
+    {0pt}
+    %Contents AFTER LABEL
+    {
+        \hfill
+        \normalsize
+        \textnormal
+    }
+\titleformat
+    % titleformat TARGET
+    {\subsection}
+    % Format of the LABEL
+    {\large\bfseries}
+    % Contents of the labLABELel
+    {Notes on Lesson \arabic{subsection}}
+    % Horizontal distence between LABEL and Title
+    {0pt}
+    %Contents AFTER LABEL
+    {}
+\titleformat
+    % titleformat TARGET
+    {\subsubsection}
+    % Format of the LABEL
+    {\bfseries\normalsize}
+    % Contents of the labLABELel
+    {$\bullet$~Problem \arabic{subsubsection} - }
+    % Horizontal distence between LABEL and Title
+    {0pt}
+    %Contents AFTER LABEL
+    {}
