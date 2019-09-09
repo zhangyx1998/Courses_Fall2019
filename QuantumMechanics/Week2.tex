@@ -1,3 +1,66 @@
 \section{Play with Schrödinger equation}
 \vspace{-15pt}\noindent\rule{\textwidth}{0.1pt}\vspace{-10pt}
     \subsection{\hfill \small Monday Sep 9}
+    \subsubsection*{Measurements and Operators}
+    Starting with the most basic measurable value: \textit{expectation value of position} $<x>$
+    \[
+        <x> = \int x\,\rho(x)\,dx = \int \psi^*\,x\,\psi\,dx
+    \]
+
+    Then consider $<x>$ change with time:
+    \allowdisplaybreaks\begin{align}
+        \dfrac{d}{dt}\,<x> & = \dfrac{d}{dt}\,\int \Psi^*\,x\,\Psi\,dx\\
+        & = \int x \dfrac{\partial}{\partial t}|\Psi|^2\,dx\\
+        & = \int x \left( {\color{red}\dfrac{\partial \Psi^*}{\partial t}\Psi} + {\color{blue}\dfrac{\partial \Psi}{\partial t}\Psi^*} \right)\,dx\\
+    % Use Schrödinger Equation to replace dt as dx^2
+        \color{gray} Schrödinger Eq\Rightarrow
+            i\hbar\,\dfrac{\partial}{\partial t}\Psi 
+        &\color{gray} = -\dfrac{\hbar^2}{2m}\,\dfrac{\partial}{\partial x^2}\Psi + V\Psi\\
+        \color{gray} -i\hbar\,\dfrac{\partial}{\partial t}\Psi^* 
+        &\color{gray} = -\dfrac{\hbar^2}{2m}\,\dfrac{\partial}{\partial x^2}\Psi^* + V\Psi^*\\
+        \color{gray} Conclude~to\Rightarrow
+        \color{red} \dfrac{\partial\Psi}{\partial t}\cdot\Psi^*
+        &\color{gray} = +\dfrac{i\hbar}{2m}\,\dfrac{\partial}{\partial x^2}\Psi\cdot\Psi^* + \dfrac{V}{i\hbar}\Psi\cdot\Psi^*\\
+        \color{blue}\dfrac{\partial\Psi^*}{\partial t}\cdot\Psi
+        &\color{gray} = -\dfrac{i\hbar}{2m}\,\dfrac{\partial}{\partial x^2}\Psi^*\cdot\Psi - \dfrac{V}{i\hbar}\Psi^*\cdot\Psi\\
+        & = \dfrac{i\hbar}{2m}\int x\cdot \left( \Psi^*\dfrac{\partial^2}{\partial x^2}\Psi - \Psi \dfrac{\partial^2}{\partial x^2}\Psi^* \right)\,dx\\
+    % Simplify using Math tricks
+        \color{gray}
+            Math tricks\Rightarrow
+            \left( u\,\ddot{v} - v\,\ddot{u} \right)
+        &\color{gray}
+            = \dfrac{d}{dx} \left( u\,\dot{v} - v\,\dot{u} \right)\\
+        & = \dfrac{i\hbar}{2m}\int x \cdot \dfrac{\partial}{\partial x} \left( \Psi^*\dfrac{\partial}{\partial x}\Psi - \Psi \dfrac{\partial}{\partial x}\Psi^* \right)\,dx\\
+    % Use Integral by part to remove the annoying x
+        \color{gray} Using~integral~by~part\Rightarrow u\cdot dv 
+        &\color{gray} = uv - v\cdot du\\
+        \color{gray} let\Rightarrow u 
+        &\color{gray} = x\\
+        \color{gray} v
+        &\color{gray} = \Psi^*\dfrac{\partial}{\partial x}\Psi - \Psi \dfrac{\partial}{\partial x}\Psi^*\\
+        \color{gray} We~get\Rightarrow\\
+        \color{gray} x \cdot d \left( \Psi^*\dfrac{\partial}{\partial x}\Psi - \Psi \dfrac{\partial}{\partial x}\Psi^* \right)
+        = u\cdot dv
+        &\color{gray} = \bcancel{u\,v} - v\cdot du
+        = - \left( \Psi^*\dfrac{\partial}{\partial x}\Psi - \Psi \dfrac{\partial}{\partial x}\Psi^* \right)\,dx\\
+        & =  -\dfrac{i\hbar}{2m} \int \left( \Psi^*\dfrac{\partial}{\bcancel{\partial x}}\Psi - \Psi \dfrac{\partial}{\bcancel{\partial x}}\Psi^* \right) \,\bcancel{dx}\\
+    % Use Integral by part again to relpace Psi d Psi*
+        \color{gray} Using~integral~by~part~again\Rightarrow u\cdot dv - v\cdot du
+        &\color{gray} = - uv + 2u\cdot dv\\
+        \color{gray} let\Rightarrow u 
+        &\color{gray} = \Psi^*\\
+        \color{gray} v
+        &\color{gray} = \Psi\\
+        \color{gray} We~get\Rightarrow
+        \color{gray} \Psi^*\partial\Psi - \Psi \partial\Psi^*
+        = u\cdot dv - v\cdot du
+        &\color{gray} = \bcancel{-u\,v} + 2v\cdot du
+        = 2\,\Psi^* \partial\Psi
+        = 2\,\Psi^* \dfrac{\partial}{\partial x}\Psi\,dx\\
+        & = -\dfrac{i\hbar}{\bcancel{2}m} \int \bcancel{2}\cdot \Psi^* \dfrac{\partial}{\partial x}\Psi\,dx\\
+        & = \int \Psi^* \left(-\dfrac{i\hbar}{m}\dfrac{\partial}{\partial x}\right)\Psi\,dx
+    \end{align}
+    Simply using $p = mv \Rightarrow\, <p> = m\dfrac{d\,<x>}{dt}$
+    \[
+        <p> = \int \Psi^* \left(-i\hbar\,\dfrac{\partial}{\partial x}\right)\Psi\,dx = \int \Psi^* \left(\dfrac{\hbar}{i}\cdot\dfrac{\partial}{\partial x}\right)\Psi\,dx
+    \]
