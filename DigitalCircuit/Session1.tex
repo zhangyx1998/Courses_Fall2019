@@ -1,3 +1,94 @@
 \section{Logical caculation and Binary code}
 \vspace{-15pt}\noindent\rule{\textwidth}{0.1pt}\vspace{-10pt}
-    \subsection*{Homework - Package 1}
+    \subsection{Notes}
+    \subsubsection*{Logical Caculation}
+    \subsection{Homework}
+    \subsubsection{2.3 (3) \textnormal{Convert $145.6875_D$ to Binary}.}
+    {\color{hwSolution}
+        For integer part: \[145_D = 1001~0001_B\]
+
+        For Decimal part: \[0.6875_D = 0.1011_B\]
+
+        Hence:            \[145.6875_D = 1001~0001.1011_B\]
+    }
+    \subsubsection{2.7 (4) \textnormal{Prove Logical Equation: $BC+AD=(B+A)(B+D)(A+C)(C+D)$}.} 
+    {\color{hwSolution}
+        \noindent Proof:
+
+        \textbf{\textit{LHS:}}
+        \begin{align*}
+            AB+CD &= \overline{\overline{BC+AD}}\\
+            &= \overline{\overline{BC}\,\overline{AD}}\\
+            &= \overline{\overline{BC}\,\overline{AD}}\\
+            &= \overline{(\bar{B}+\bar{C})\,(\bar{A}+\bar{D})}\\
+            &= \overline{\bar{A}\bar{B}+\bar{B}\bar{D}+\bar{A}\bar{C}+\bar{C}\bar{D}}\\
+        \end{align*}
+
+        \textbf{\textit{RHS:}}
+        \begin{align*}
+            (B+A)(B+D)(A+C)(C+D) &= \overline{\overline{(B+A)(B+D)(A+C)(C+D)}}\\
+            &= \overline{\overline{(B+A)}+\overline{(B+D)}+\overline{(A+C)}+\overline{(C+D)}}\\
+            &= \overline{\bar{A}\bar{B}+\bar{B}\bar{D}+\bar{A}\bar{C}+\bar{C}\bar{D}}\\
+        \end{align*}
+        Hence:
+        \[\textbf{\textit{LHS=RHS}}\]
+        Prove Complete.
+    }
+    \subsubsection{2.8 (4) \textnormal{Find the Reverse Expression of Logical function $L_4=(A+\bar{B})(\bar{A}+\bar{B}+C)$}.}
+    {\color{hwSolution}
+        \begin{align*}
+            \overline{L_4} 
+            &= \overline{(A+\bar{B})(\bar{A}+\bar{B}+C)}\\
+            &= \overline{(A+\bar{B})}+\overline{(\bar{A}+\bar{B}+C)}\\
+            &= \bar{A}B+(\overline{\bar{A}+\bar{B}})\bar{C}\\
+            &= \bar{A}B+AB\bar{C}
+        \end{align*}
+    }
+    \subsubsection{2.11 \textnormal{Consider a specific Logical Circuit with three input $A,B~and~C$, its output is 1 when ture inputs are more than false inputs, vice versa. Draw value chart of this circuit and find its Logical Expression}.}
+    {\color{hwSolution}
+        \begin{center}
+            \begin{tabular}{c c c|c}
+                $A$ & $B$ & $C$ & $Output$ \\
+                \hline
+                0   & 0   & 0   & 0 \\
+                1   & 0   & 0   & 0 \\
+                0   & 1   & 0   & 0 \\
+                1   & 1   & 0   & 1 \\
+                0   & 1   & 1   & 1 \\
+                1   & 1   & 1   & 1 \\
+                0   & 0   & 1   & 0 \\
+                1   & 0   & 1   & 1 \\
+            \end{tabular}
+            \[L = AB + BC + AC\]
+        \end{center}
+    }
+    \subsubsection{2.13 (7) \textnormal{Simplify Logical Function: $L=\overline{(AB+\bar{B}C)(AC+\bar{A}\bar{C})}$}.}
+    {\color{hwSolution}
+        \begin{align*}
+            L
+            &= \overline{(AB+\bar{B}C)(AC+\bar{A}\bar{C})}\\
+            &= \overline{(AB+\bar{B}C)}+\overline{(AC+\bar{A}\bar{C})}\\
+            &= \overline{AB}\,\overline{\bar{B}C}+\overline{AC}\,\overline{\bar{A}\bar{C}}\\
+            &= (\bar{A}+\bar{B})(B+\bar{C}) + (\bar{A}+\bar{C})(A+C)\\
+            &= \bar{A}B+\bar{A}\bar{C}+\bcancel{\bar{B}B}+\bar{B}\bar{C}+\bcancel{\bar{A}A}+\bar{A}C+\bar{C}A+\bcancel{\bar{C}C}\\
+            &= \bar{A}(\bcancel{\bar{C}+C})+\bar{A}B+\bar{B}\bar{C}+\bar{C}A\\
+            &= \bar{A}+\bar{B}\bar{C}+\bar{C}A\\
+            &= \bar{A}+\bar{B}\bar{C}+\bar{C}\\
+            &= \bar{A}+\bar{C}
+        \end{align*}
+    }
+    \subsubsection{2.15 (6) \textnormal{Use Carno Chart to simplify $L=\Sigma m(2,3,4,5,9) + \Sigma d(10,11,12,13)$}.}
+    {\color{hwSolution}
+        \begin{center}
+            \begin{tabular}{c|c c c c}
+                $_{CD}\smallsetminus^{AB}$
+                    & 0~0   & 0~1   & 1~1   & 1~0   \\
+                \hline
+                0~0 &       &       & 1     & 1     \\
+                0~1 & 1     & 1     &       &       \\
+                1~1 & x     & x     &       &       \\
+                1~0 &       & 1     & x     & x     
+            \end{tabular}
+            \[L = \bar{A}D+A\bar{D}+BC\bar{D}\]
+        \end{center}
+    }
