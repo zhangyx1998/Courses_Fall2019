@@ -2,12 +2,32 @@
 \vspace{-15pt}\noindent\rule{\textwidth}{0.1pt}\vspace{-10pt}
     \subsection{Notes}
     \subsubsection*{Logical Caculation}
+
+    Basic logical operations:
+    \small{\sffamily{
+    \begin{center}\begin{tabular}{|c|c|c|l|}\hline
+        NAME    & OPERATOR      & Example       & Description\\\hline
+        $AND$   & $\times$      & $A\,B$        & All inputs are true\\\hline
+        $OR$    & $+$           & $A+B$         & One or more inputs are true\\\hline
+        $NOT$   & $\overline{A}$ & $\overline{A}$& Reverse input\\\hline
+        $XOR$   & $\oplus$      & $A\oplus B$   & One and only one input is true\\\hline
+    \end{tabular}\end{center}
+    }}
+
+    Important tricks:
+    \begin{align}
+        \overline{AB}   &= \bar{A} + \bar{B}\\
+        \overline{A+B}  &= \bar{A} \,\bar{B}\\
+        A + \bar{A}B    &= A + B\\
+        A + AB          &= A
+    \end{align}
+
     \subsection{Homework}
     \subsubsection{2.3 (3) \textnormal{Convert $145.6875_D$ to Binary}.}
     {\color{hwSolution}
         For integer part: \[145_D = 1001~0001_B\]
 
-        For Decimal part: \[0.6875_D = 0.1011_B\]
+        For decimal part: \[0.6875_D = 0.1011_B\]
 
         Hence:            \[145.6875_D = 1001~0001.1011_B\]
     }
