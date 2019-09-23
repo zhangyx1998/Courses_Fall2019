@@ -5,3 +5,4 @@
 *.gz
 *.out
 .DS_Store
+*/.compile/local

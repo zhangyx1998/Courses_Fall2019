@@ -1,0 +1,156 @@
+[
+    {
+        "Name" : "Fall 2019",
+        "Suffix" : ["3rd Year","Ongoing"],
+        "Abstract" : "This semester is when I return from a gap year. The general goal of course selection is to enhance my basic abilities to solve complex physics problems.",
+        "Contents" : [
+            {
+                "Title"     : "Quantum Mechanics",
+                "Subtitle"  : "量子力学 - 张盈",
+                "LineColor" : "LINE_Blue",
+                "Location"  : "Fall2019/QuantumMechanics/contents.json",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Group Theory",
+                "Subtitle"  : "群论导论 - 王延申",
+                "LineColor" : "LINE_Blue",
+                "Location"  : "Fall2019/GroupTheory/contents.json",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Digital Circuit",
+                "Subtitle"  : "数字电路基础 - 张虹",
+                "LineColor" : "LINE_Blue",
+                "Location"  : "Fall2019/DigitalCircuit/contents.json",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Micro Computer",
+                "Subtitle"  : "微机原理 - 吴宁",
+                "LineColor" : "LINE_Blue",
+                "Location"  : "Fall2019/MicroComputer/contents.json",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Probability & Statistics",
+                "Subtitle"  : "（缓考）概率论与数理统计",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Mathematical Method of Physics",
+                "Subtitle"  : "（缓考）数学物理方法",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Calculation Physics",
+                "Subtitle"  : "（缓考）计算物理",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Optics",
+                "Subtitle"  : "（缓考）光学",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Quantum Field Theory",
+                "Subtitle"  : "（预）量子场论 - 冯俊",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Electrodynamics",
+                "Subtitle"  : "（预）电动力学",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            }
+        ]
+    },
+    {
+        "Name" : "Spring 2018",
+        "Suffix" : ["2nd Year"],
+        "Abstract" : "To be edited.",
+        "Contents" : [
+            {
+                "Title"     : "Analytical Mechanics",
+                "Subtitle"  : "UC Berkeley",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Quantum Mechanics",
+                "Subtitle"  : "UC Berkeley",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Electromagnatics",
+                "Subtitle"  : "UC Berkeley",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            },
+            {
+                "Title"     : "Mathematical Method of Physics",
+                "Subtitle"  : "UC Berkeley",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            }
+        ]
+    },
+    {
+        "Name" : "Fall 2017",
+        "Suffix" : ["2nd Year"],
+        "Abstract" : "To be edited.",
+        "Contents" : [
+            {
+                "Title"     : "Not edited",
+                "Subtitle"  : "Not applicable",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            }
+        ]
+    },
+    {
+        "Name" : "Spring 2017",
+        "Suffix" : ["1st Year"],
+        "Abstract" : "To be edited.",
+        "Contents" : [
+            {
+                "Title"     : "Not edited",
+                "Subtitle"  : "Not applicable",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            }
+        ]
+    },
+    {
+        "Name" : "Fall 2016",
+        "Suffix" : ["1st Year"],
+        "Abstract" : "To be edited.",
+        "Contents" : [
+            {
+                "Title"     : "Not edited",
+                "Subtitle"  : "Not applicable",
+                "LineColor" : "LINE_Red",
+                "Location"  : "",
+                "Navigate"  : true
+            }
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+{
+    "Info"       : "",
+    "Theme"      : "BKG_Theme_Red",
+    "DefaultTab"   : "Notes",
+    "doc_root"   : "",
+    "Tabs" : [
+        {
+            "Title"  : "Schedule",
+            "Renderer" : "List",
+            "Content"  : "./schedule.json"
+        },
+        {
+            "Title"  : "Course Info",
+            "Renderer" : "Markdown",
+            "Content"  : "./readme.md"
+        },
+        {
+            "Title"  : "Notes",
+            "Renderer" : "iframe",
+            "Contents"  : [
+                "/lib/modules/PDF/app#/static/Fall2019/GroupTheory/.compile/Compile.pdf"
+            ]
+        },
+        {
+            "Title"  : "Homework",
+            "Renderer" : "iframe",
+            "Contents"  : [
+                "/lib/modules/PDF/app#/static/Fall2019/GroupTheory/.compile/Compile.pdf"
+            ]
+        }
+    ]
+}
