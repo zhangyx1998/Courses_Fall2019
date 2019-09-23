@@ -11,21 +11,21 @@
         },
         {
             "Title"  : "Course Info",
-            "Renderer" : "Markdown",
-            "Content"  : "./readme.md"
+            "Renderer" : "iframe",
+            "Content"  : "/static/Fall2019/README.md"
         },
         {
             "Title"  : "Notes",
             "Renderer" : "iframe",
             "Contents"  : [
-                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Compile.pdf"
+                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Web.pdf"
             ]
         },
         {
             "Title"  : "Homework",
             "Renderer" : "iframe",
             "Contents"  : [
-                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Compile.pdf"
+                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Doc.pdf"
             ]
         }
     ]
