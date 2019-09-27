@@ -6,3 +6,9 @@
 *.out
 .DS_Store
 */.compile/local
+htxelatex
+QuantumMechanics/.compile/Doc.xref
+QuantumMechanics/.compile/Doc.4tc
+QuantumMechanics/.compile/Doc.idv
+QuantumMechanics/.compile/Doc.lg
+QuantumMechanics/.compile/Doc.tmp
