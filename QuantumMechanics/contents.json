@@ -12,7 +12,9 @@
         {
             "Title"  : "Course Info",
             "Renderer" : "iframe",
-            "Content"  : "/static/Fall2019/README.md"
+            "Contents"  : [
+                "/lib/modules/Marked/app#/static/Fall2019/QuantumMechanics/README.md"
+            ]
         },
         {
             "Title"  : "Notes",

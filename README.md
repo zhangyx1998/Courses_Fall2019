@@ -1,6 +1,6 @@
-![Project Cover](Reference/Resources/Cover.svg)
+<!-- ![Project Cover](./Reference/Resources/Cover.svg) -->
 
-# Courses Aug-2019
+# Courses Fall2019
 ---
 
 TEXTBOOK
