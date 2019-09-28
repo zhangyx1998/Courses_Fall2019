@@ -20,14 +20,14 @@
             "Title"  : "Notes",
             "Renderer" : "iframe",
             "Contents"  : [
-                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Web.pdf"
+                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Complete.pdf"
             ]
         },
         {
             "Title"  : "Homework",
             "Renderer" : "iframe",
             "Contents"  : [
-                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Doc.pdf"
+                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Complete.pdf"
             ]
         }
     ]

@@ -1,11 +1,17 @@
-\section{Play with Schrödinger equation}\SectionRule
-    \subsection{\hfill \small Measurements and Operators - Monday Sep 9}
-    \subsubsection*{Starting with the most basic measurable value: \textit{expectation value of position} $<x>$}
+\section{Week2 Notes\hfill\normalsize\textit{Play with Schrödinger equation}}\SectionRule
+
+\subsection{Notes on Lesson 1\hfill\small\textit{Measurements and Operators - Monday Sep 9}}
+
+    \subsubsection{Derivation of momentum operator}
+    
+    \textit{Starting with the most basic measurable value: \textit{expectation value of position} $<x>$}
+
     \[
         <x> = \int x\,\rho(x)\,dx = \int \psi^*\,x\,\psi\,dx
     \]
 
-    \subsubsection*{Then consider $<x>$ change with time:}
+    \textit{Then consider $<x>$ change with time:}
+    
     \allowdisplaybreaks\begin{align}
         \dfrac{d}{dt}\,<x> &= \dfrac{d}{dt}\,\int \Psi^*\,x\,\Psi\,dx\\
         &= \int x \dfrac{\partial}{\partial t}|\Psi|^2\,dx\\
@@ -58,11 +64,15 @@
         &= -\dfrac{i\hbar}{\bcancel{2}m} \int \bcancel{2}\cdot \Psi^* \dfrac{\partial}{\partial x}\Psi\,dx\\
         &= \int \Psi^* \left(-\dfrac{i\hbar}{m}\dfrac{\partial}{\partial x}\right)\Psi\,dx
     \end{align}
-    \subsubsection*{Now we can find a new operator: momentum $\hat{p}$}
+
+    \textit{Now we can find a new operator: momentum $\hat{p}$}
+    
     \[
         {\color{blue}<p>} = m\dfrac{d\,<x>}{dt} = \int \Psi^* \left(-i\hbar\,\dfrac{\partial}{\partial x}\right)\Psi\,dx = \int \Psi^* {\color{blue}\left(\dfrac{\hbar}{i}\cdot\dfrac{\partial}{\partial x}\right)}\Psi\,dx
     \]
-    \subsubsection*{Additional proof of~~$\dfrac{\partial}{\partial t}\int |\Psi|^2\,dx = 0$}
+    
+    \textit{Additional proof of~~$\dfrac{\partial}{\partial t}\int |\Psi|^2\,dx = 0$}
+
     \begin{align}
         \dfrac{d}{dt}\int|\Psi|^2\,dx &= \int \dfrac{\partial}{\partial t}|\Psi|^2\,dx\\
         &= \int \dfrac{\partial}{\partial t}\left(\Psi^*\Psi\right)\,dx\\
@@ -82,5 +92,3 @@
         &= 0\\
         &\Rightarrow~ Proved
     \end{align}
-
-    \subsection*{No Homework For Week 2}
