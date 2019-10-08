@@ -27,7 +27,7 @@
             "Title"  : "Homework",
             "Renderer" : "iframe",
             "Contents"  : [
-                "/lib/modules/PDF/app#/static/Fall2019/QuantumMechanics/.compile/Complete.pdf"
+                "/lib/modules/PDF#/static/Fall2019/QuantumMechanics/.compile/contents_hw.json"
             ]
         }
     ]
