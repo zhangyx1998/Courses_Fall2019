@@ -49,9 +49,4 @@
 ### Contacts  
 	张盈 		NA  
 	课程群		NA  
-
-### Code highlighting
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
+  
