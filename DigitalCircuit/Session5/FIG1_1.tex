@@ -1,0 +1,100 @@
+\begin{center}\begin{tikzpicture}
+% 74LS138 CHIP 1 (-4.0)
+    \draw[black,thick]
+        (-4.8,2.4)--(-4.8,0.0)
+        --(-3.2,0.0)--(-3.2,2.4)
+        --cycle;
+    % Left Side
+    \draw[black,thick, -] (-4.8,2.0) node[right]{$1J$}
+    -- (-5.5,2.0);
+    \draw[black,thick,o-] (-4.8,1.2) node[right]{$~~~C1$}
+    -- (-5.5,1.2);
+    \draw[black,thick, -] (-4.8,0.4) node[right]{$1K$}
+    -- (-5.5,0.4);
+    %NEGEDGE
+    \draw[black,thick, -]
+        (-4.8,1.0) -- (-4.5,1.2) -- (-4.8,1.4) ;
+    % Right Side
+    \draw[black,thick,o-] (-3.2,0.6) node[left]{$\bar{Y}$}
+    -- (-2.5,0.6);
+    \draw[black,thick,-*] (-3.2,1.8) node[left]{$Y$}
+    -- (-2.4,1.8);
+% 74LS138 CHIP 2 (+0.0)
+    \draw[black,thick]
+        (-0.8,2.4)--(-0.8,0.0)
+        --( 0.8,0.0)--( 0.8,2.4)
+        --cycle;
+    % Left Side
+    \draw[black,thick, -] (-0.8,2.0) node[right]{$1J$}
+    -- (-1.5,2.0);
+    \draw[black,thick,o-] (-0.8,1.2) node[right]{$~~~C1$}
+    -- (-1.5,1.2);
+    \draw[black,thick, -] (-0.8,0.4) node[right]{$1K$}
+    -- (-1.5,0.4);
+    %NEGEDGE
+    \draw[black,thick, -]
+        (-0.8,1.0) -- (-0.5,1.2) -- (-0.8,1.4) ;
+    % Right Side
+    \draw[black,thick,o-] (0.8,0.6) node[left]{$\bar{Y}$}
+    -- (1.0,0.6);
+    \draw[black,thick,-*] (0.8,1.8) node[left]{$Y$}
+    -- (1.6,1.8);
+% 74LS138 CHIP 3 (+4.0)
+    \draw[black,thick]
+        ( 3.2,2.4)--( 3.2,0.0)
+        --( 4.8,0.0)--( 4.8,2.4)
+        --cycle;
+    % Left Side
+    \draw[black,thick, -] ( 3.2,2.0) node[right]{$1J$}
+    -- ( 2.5,2.0);
+    \draw[black,thick,o-] ( 3.2,1.2) node[right]{$~~~C1$}
+    -- ( 2.5,1.2);
+    \draw[black,thick, -] ( 3.2,0.4) node[right]{$1K$}
+    -- ( 2.5,0.4);
+    %NEGEDGE
+    \draw[black,thick, -]
+        ( 3.2,1.0) -- ( 3.5,1.2) -- ( 3.2,1.4) ;
+    % Right Side
+    \draw[black,thick,o-] ( 4.8,0.6) node[left]{$\bar{Y}$}
+    -- (5.5,0.6);
+    \draw[black,thick, -] ( 4.8,1.8) node[left]{$Y$}
+    -- (5.5,1.8);
+% Wire - CP
+    % CP -> Chip3(#C1)
+    \draw[black,thick, -] (-6.5,3.6) node[left]{$CP$}
+    -- ( 2.0,3.6) -- ( 2.0,1.2) --
+    ( 2.5,1.2);
+    %  CP -> Chip1(#C1)
+    \draw[black,thick,*-] (-6.0,3.7)
+    -- (-6.0,1.2) --
+        (-5.5,1.2);
+% Wire - Vcc
+    % Vcc -> Chip*(1K) -> Chip2(1J)
+    \draw[black,thick, -] (-6.5,-0.4) node[left]{$V_{cc}$}
+    -- ( 2.5,-0.4) -- ( 2.5, 0.4);
+    \draw[black,thick,*-] (-5.5,-0.5) -- (-5.5, 0.4);
+    \draw[black,thick,*-] (-1.5,-0.5) -- (-1.5, 0.4);
+    \draw[black,thick,*-] (-1.5, 0.3) -- (-1.5, 2.0);
+% Wire - Q
+    % Q0 -- Chip1(Y) -- Chip3(1J)
+    \draw[black,thick, -] (-2.5,-1.2) node[below]{$Q_{0}$}
+    -- (-2.5, 2.8) -- ( 2.5, 2.8) -- ( 2.5, 2.0);
+    % Q1 -- Chip2(Y) -- Chip3(1J)
+    \draw[black,thick, -] ( 1.5,-1.2) node[below]{$Q_{1}$}
+    -- ( 1.5, 1.8) -- ( 3.2,1.8);
+    % Q2 -- Chip3(Y)
+    \draw[black,thick, -] ( 5.5,-1.2) node[below]{$Q_{2}$}
+    -- ( 5.5, 1.8);
+% Wire - Others
+    % Chip1(#Y) -- Chip2(#C1)
+    \draw[black,thick, -]
+        (-2.5,0.6)
+    -- (-2.0,0.6) -- (-2.0,1.2) --
+        (-1.5,1.2);
+    % Chip1(1J) -- Chip3(#Y)
+    \draw[black,thick, -]
+        (-5.5,2.0)
+    -- (-5.5,3.2) -- (6.0,3.2) -- (6.0,0.6) --
+        (5.5,0.6);
+    
+\end{tikzpicture}\end{center}
