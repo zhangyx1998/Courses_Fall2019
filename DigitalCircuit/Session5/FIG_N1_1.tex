@@ -1,6 +1,7 @@
 \begin{center}\begin{tikzpicture}
 % CHIP 2 (Y+0.0)
   \draw[black,thick]
+    ( 0.0,1.2) node{$_{4538_2}$}
     (-1.2,2.4)--(-1.2,0.0)
   --( 1.2,0.0)--( 1.2,2.4)
   --cycle;
@@ -38,6 +39,7 @@
   \draw[black,thick,-*] ( 1.5, 3.0) -- ( 1.8, 3.0);
 % CHIP 1 (Y+5.0)
     \draw[black,thick]
+    ( 0.0,6.2) node{$_{4538_1}$}
     (-1.2,7.4)--(-1.2,5.0)
   --( 1.2,5.0)--( 1.2,7.4)
   --cycle;
@@ -47,10 +49,10 @@
   \draw[black,thick,o-] (-1.2, 5.8) node[right]{$B$}
   -- (-2.0,5.8) node[left]{\textit{GND}};
   % Right Side
-  \draw[black,thick, -] ( 1.2, 6.6) node[left]{$Q$}
-  -- ( 2.0, 6.6);
+  \draw[black,thick, -] ( 1.2, 6.6) node[left]{$Q$};
+  % -- ( 2.0, 6.6);
   \draw[black,thick,o-] ( 1.2, 5.8) node[left]{$\bar{Q}$}
-  -- ( 1.4, 5.8);
+  -- ( 2.0, 5.8);
   % Top Side
   \draw[black,thick, -] (-0.4, 7.4) node[below]{$C_X$}
   -- (-0.4, 8.0);
@@ -87,6 +89,6 @@
   (-4.0, 3.7) -- (-4.0,0.8) -- (-2.0,0.8);
   \draw[black,thick, -]
   ( 2.0, 1.6) -- ( 3.0, 1.6) -- ( 3.0, 3.4) -- ( 3.5, 3.4)
-  ( 2.0, 6.6) -- ( 3.0, 6.6) -- ( 3.0, 4.0) -- ( 3.5, 4.0);
+  ( 2.0, 5.8) -- ( 3.0, 5.8) -- ( 3.0, 4.0) -- ( 3.5, 4.0);
   \draw[black,thick, -] (4.5,3.7) -- (6.0,3.7) node[right]{$D_{OUT}$};
 \end{tikzpicture}\end{center}

@@ -4,7 +4,35 @@
     {\color{hwSolution}
     \subsection*{Another method to generate delayed paluse - without losing its length}
         \input{../Session5/FIG_N1_1}
-        
+
+        Functionality analysis:
+
+        \begin{center}\begin{tikzpicture}
+            \draw[black,thick]
+                (0.0,3.0) node[left]{$_{D_{IN}}$}
+                --(0.0,3.0)
+                --(1.0,3.0)--(1.0,3.6)
+                --(2.0,3.6)--(2.0,3.0)
+                --(12.0,3.0);
+            \draw[black,thick]
+                (0.0,2.0) node[left]{$_{Q_{1}}$}
+                --(0.0,2.0)
+                --(1.0,2.0)--(1.0,2.6)
+                --(7.0,2.6)--(7.0,2.0)
+                --(12.0,2.0);
+            \draw[black,thick]
+                (0.0,1.0) node[left]{$_{Q_{2}}$}
+                --(0.0,1.0)
+                --(2.0,1.0)--(2.0,1.6)
+                --(8.0,1.6)--(8.0,1.0)
+                --(12.0,1.0);
+            \draw[black,thick]
+                (0.0,0.0) node[left]{$_{D_{OUT}}$}
+                --(0.0,0.0)
+                --(7.0,0.0)--(7.0,0.6)
+                --(8.0,0.6)--(8.0,0.0)
+                --(12.0,0.0);
+        \end{tikzpicture}\end{center}
     }
     \subsection{Homework}
     \subsubsection{8.3 \textnormal{Analyze Logical function of the given circuit}.}
