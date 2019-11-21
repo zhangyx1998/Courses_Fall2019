@@ -9,49 +9,107 @@
 
         \begin{center}\begin{tikzpicture}
             \draw[black,thick]
-                (0.0,3.0) node[left]{$_{D_{IN}}$}
+                  (0.0,3.0) node[left]{$_{D_{IN}}$}
                 --(0.0,3.0)
                 --(1.0,3.0)--(1.0,3.6)
                 --(2.0,3.6)--(2.0,3.0)
                 --(12.0,3.0);
             \draw[black,thick]
-                (0.0,2.0) node[left]{$_{Q_{1}}$}
+                  (0.0,2.0) node[left]{$_{Q_{1}}$}
                 --(0.0,2.0)
                 --(1.0,2.0)--(1.0,2.6)
                 --(7.0,2.6)--(7.0,2.0)
                 --(12.0,2.0);
             \draw[black,thick]
-                (0.0,1.0) node[left]{$_{Q_{2}}$}
+                  (0.0,1.0) node[left]{$_{Q_{2}}$}
                 --(0.0,1.0)
                 --(2.0,1.0)--(2.0,1.6)
                 --(8.0,1.6)--(8.0,1.0)
                 --(12.0,1.0);
             \draw[black,thick]
-                (0.0,0.0) node[left]{$_{D_{OUT}}$}
+                  (0.0,0.0) node[left]{$_{D_{OUT}}$}
                 --(0.0,0.0)
                 --(7.0,0.0)--(7.0,0.6)
                 --(8.0,0.6)--(8.0,0.0)
                 --(12.0,0.0);
+            \draw[gray,dash pattern={on 0.015cm off 0.03cm},thick]
+                (1.0,3.0) -- (1.0,-1.0)
+                (2.0,3.0) -- (2.0,-1.0)
+                (7.0,2.0) -- (7.0,-1.0)
+                (8.0,1.0) -- (8.0,-1.0)
+            ;
+            \draw[gray,thick,<->]
+                (1.0,-1.0) --(1.5,-1.0) node[below]{$t_W$} -- (2.0,-1.0);
+            \draw[gray,thick,<->]
+                (7.0,-1.0) --(7.5,-1.0) node[below]{$t_W$} -- (8.0,-1.0);
+            \draw[hwSolution,thick,<->]
+                (1.1, 2.3) --(4.0, 2.3) node[below]{$t_{CR}$} -- (6.9, 2.3);
+            \draw[hwSolution,thick,<->]
+                (2.1, 1.3) --(5.0, 1.3) node[below]{$t_{CR}$} -- (7.9, 1.3);
         \end{tikzpicture}\end{center}
     }
     \subsection{Homework}
     \subsubsection{8.3 \textnormal{Analyze Logical function of the given circuit}.}
         \input{../Session5/FIG1_1}
     {\color{hwSolution}
-        
+    \begin{center}
+    $K\equiv 1$,~~J=1 flip,~~J=0 reset.
+
+    \begin{tabular}{|c|ccc|ccc|c|}
+        \hline
+        $CP $ & $Q_0$ & $Q_1$ & $Q_2$ & $Q_0^N$ & $Q_1^N$ & $Q_2^N$ & $CP^N$
+        \\
+        \hline
+        $ 0 $ & $ 0 $ & $ 0 $ & $ 0 $ & $  1  $ & $  1  $ & $  0  $ & $ 6 $\\
+        $ 1 $ & $ 0 $ & $ 0 $ & $ 1 $ & $  0  $ & $  0  $ & $  0  $ & $ 0 $\\
+        $ 2 $ & $ 0 $ & $ 1 $ & $ 0 $ & $  1  $ & $  0  $ & $  0  $ & $ 4 $\\
+        $ 3 $ & $ 0 $ & $ 1 $ & $ 1 $ & $  0  $ & $  1  $ & $  0  $ & $ 2 $\\
+        $ 4 $ & $ 1 $ & $ 0 $ & $ 0 $ & $  0  $ & $  0  $ & $  0  $ & $ 0 $\\
+        $ 5 $ & $ 1 $ & $ 0 $ & $ 1 $ & $  0  $ & $  0  $ & $  0  $ & $ 0 $\\
+        $ 6 $ & $ 1 $ & $ 1 $ & $ 0 $ & $  0  $ & $  1  $ & $  1  $ & $ 3 $\\
+        $ 7 $ & $ 1 $ & $ 1 $ & $ 1 $ & $  0  $ & $  1  $ & $  0  $ & $ 2 $\\ 
+        \hline      
+    \end{tabular}
+
+    \begin{tikzpicture}
+        \draw[hwSolution,thick]
+        (0,3)node[above]{~}
+        (0,3)node[below]{Carno Chart:}
+        (-0.3,2) node(n5)[circle,draw]{5} 
+        (0,1) node(n0)[circle,draw,]{0}
+        (1.1, 0.6) node(n6)[circle,draw,]{6}
+        (1.1,-0.6) node(n3)[circle,draw,]{3}
+        (-0.8,0) node(n4)[circle,draw,]{4}
+        (0,-1) node(n2)[circle,draw,]{2}
+        (-0.3,-2) node(n7)[circle,draw,]{7}
+        ;
+        \draw [hwSolution,->,thick] (n5) -- (n0);
+        \draw [hwSolution,->,thick] (n0) -- (n6);
+        \draw [hwSolution,->,thick] (n6) -- (n3);
+        \draw [hwSolution,->,thick] (n3) -- (n2);
+        \draw [hwSolution,->,thick] (n2) -- (n4);
+        \draw [hwSolution,->,thick] (n4) -- (n0);
+        \draw [hwSolution,->,thick] (n7) -- (n2);
+    \end{tikzpicture}
+
+    \end{center}
     }
  
-    \subsubsection{8.6 \textnormal{}.}
+    \subsubsection{8.6 \textnormal{Design a circuit using Jump-Key flip-flop to serve given function}.}
     {\color{hwSolution}
+
+        \input{../Session5/FIG2_1}
 
     }
 
-    \subsubsection{8.7 \textnormal{}.}
+    \subsubsection{8.7 \textnormal{Build a 60 counter with 74LS293}.}
     {\color{hwSolution}
-  
+
+        \input{../Session5/FIG3_1}
+
     }
 
-    \subsubsection{8.12 \textnormal{}.}
+    \subsubsection{8.12 \textnormal{Analyze Logical function of the given circuit}.}
     {\color{hwSolution}
 
     }

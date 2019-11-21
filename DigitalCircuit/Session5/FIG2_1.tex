@@ -1,0 +1,59 @@
+\begin{center}\begin{tikzpicture}
+% JKFF CHIP 1 (-4.0)
+    \draw[hwSolution,thick   ] (-4.8,2.4)--(-4.8,0.0) --(-3.2,0.0)--(-3.2,2.4)--cycle;
+    % Left Side
+    \draw[hwSolution,thick, -] (-4.8,2.0) node[right]{$1J$} -- (-5.5,2.0);
+    \draw[hwSolution,thick,o-] (-4.8,1.2) node[right]{$~~~C1$} -- (-5.5,1.2);
+    \draw[hwSolution,thick, -] (-4.8,0.4) node[right]{$1K$} -- (-5.5,0.4);
+    %NEGEDGE
+    \draw[hwSolution,thick, -] (-4.8,1.0) -- (-4.5,1.2) -- (-4.8,1.4) ;
+    % Right Side
+    \draw[hwSolution,thick,o-] (-3.2,0.6) node[left]{$\bar{Y}$} -- (-2.6,0.6);
+    \draw[hwSolution,thick,- ] (-3.2,1.8) node[left]{$Y$} -- (-2.0,1.8) -- (-2.0,1.2) -- (-1.5,1.2);
+% JKFF CHIP 2 (+0.0)
+    \draw[hwSolution,thick   ] (-0.8,2.4)--(-0.8,0.0) --( 0.8,0.0)--( 0.8,2.4)--cycle;
+    % Left Side
+    \draw[hwSolution,thick, -] (-0.8,2.0) node[right]{$1J$} -- (-1.5,2.0);
+    \draw[hwSolution,thick,o-] (-0.8,1.2) node[right]{$~~~C1$} -- (-1.5,1.2);
+    \draw[hwSolution,thick, -] (-0.8,0.4) node[right]{$1K$} -- (-1.5,0.4);
+    %NEGEDGE
+    \draw[hwSolution,thick, -] (-0.8,1.0) -- (-0.5,1.2) -- (-0.8,1.4) ;
+    % Right Side
+    \draw[hwSolution,thick,o-] (0.8,0.6) node[left]{$\bar{Y}$} -- ( 1.4,0.6);
+    \draw[hwSolution,thick,- ] (0.8,1.8) node[left]{$Y$} -- ( 2.0,1.8) -- ( 2.0,1.2) -- ( 2.5,1.2);
+% JKFF CHIP 3 (+4.0)
+    \draw[hwSolution,thick   ] ( 3.2,2.4)--( 3.2,0.0) --( 4.8,0.0)--( 4.8,2.4)--cycle;
+    % Left Side
+    \draw[hwSolution,thick, -] ( 3.2,2.0) node[right]{$1J$} -- ( 2.5,2.0);
+    \draw[hwSolution,thick,o-] ( 3.2,1.2) node[right]{$~~~C1$} -- ( 2.5,1.2);
+    \draw[hwSolution,thick, -] ( 3.2,0.4) node[right]{$1K$} -- ( 2.5,0.4);
+    %NEGEDGE
+    \draw[hwSolution,thick, -] ( 3.2,1.0) -- ( 3.5,1.2) -- ( 3.2,1.4) ;
+    % Right Side
+    \draw[hwSolution,thick,o-] ( 4.8,0.6) node[left]{$\bar{Y}$} -- ( 5.4,0.6);
+    \draw[hwSolution,thick, -] ( 4.8,1.8) node[left]{$Y$} -- (5.5,1.8);
+% NOTGATE CHIP * (+4.0)
+    \draw[hwSolution,thick   ] ( 3.6,3.0)--( 4.2,3.3)--( 4.2,2.7)--cycle;
+    % Wire CHIP <- Chip3 Y
+    \draw[hwSolution,thick, -] ( 5.5,1.8) -- ( 5.5,3.0) -- ( 4.2,3.0);
+    % Wire CHIP -> Chip* 1J
+    \draw[hwSolution,thick,o-] ( 3.6,3.0) -- (-5.5,3.0) -- (-5.5,2.0);
+    \draw[hwSolution,thick,*-] (-1.5,3.1) -- (-1.5,2.0);
+    \draw[hwSolution,thick,*-] ( 2.5,3.1) -- ( 2.5,2.0);
+% ANDGATE CHIP * (+4.0)
+    \draw[hwSolution,thick   ] ( 3.6,-1.2)--( 4.2,-1.2)--( 4.2,-0.4)--( 3.6,-0.4)--cycle ( 3.9,-0.8)node{$\&$};
+    % Wire - CHIP <- Chip* #Y
+    \draw[hwSolution,thick, -] (-2.6, 0.6) -- (-2.6,-1.0) -- ( 3.6,-1.0);
+    \draw[hwSolution,thick, -] ( 1.4, 0.6) -- ( 1.4,-0.8) -- ( 3.6,-0.8);
+    \draw[hwSolution,thick, -] ( 5.4, 0.6) -- ( 5.4,-0.2) -- ( 3.2,-0.2) -- ( 3.2,-0.6) -- ( 3.6,-0.6);
+    % Wire - CHIP -> Z
+    \draw[hwSolution,thick, -] ( 4.2,-0.8) -- ( 5.2,-0.8) node[right]{Z};
+% Wire - CP 
+    % CP -> Chip1(#C1)
+    \draw[hwSolution,thick, -] (-6.5,1.2) node[left]{$CP$} -- (-5.5,1.2);
+% Wire - Vcc
+    % Vcc -> Chip*(1K)
+    \draw[hwSolution,thick, -] (-6.5,-0.4) node[left]{$V_{cc}$} -- ( 2.5,-0.4) -- ( 2.5, 0.4);
+    \draw[hwSolution,thick,*-] (-5.5,-0.5) -- (-5.5, 0.4);
+    \draw[hwSolution,thick,*-] (-1.5,-0.5) -- (-1.5, 0.4);
+\end{tikzpicture}\end{center}
