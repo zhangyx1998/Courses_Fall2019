@@ -112,14 +112,60 @@
     \subsubsection{8.12 \textnormal{Analyze Logical function of the given circuit}.}
     {\color{hwSolution}
 
-    }
-
-    \subsubsection{8.13 \textnormal{}.}
-    {\color{hwSolution}
+        The given circuit forms a \textbf{\textit{196 counter}} with initial value \textbf{\textit{60}} and ending value \textbf{\textit{255}}.
 
     }
 
-    \subsubsection{8.17 \textnormal{}.}
+    \subsubsection{8.13 \textnormal{Give the value saved in each register according to given waveform}.}
     {\color{hwSolution}
+
+    \begin{center}\begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $ CP $ & $Reg_1$ & $Reg_2$ & $Reg_3$ & Action(s)
+        \\
+        \hline
+        $ t0 $ & $1011$ & $1000$ & $0111$ & Chip Initialized \\
+        $ t1 $ & $1011$ & $1000$ & \color{red}{$1000$} & MOV R3,R2 \\
+        $ t2 $ & $1011$ & $1000$ & $1000$ & Enable R3 (No ST) \\
+        $ t3 $ & $1011$ & $1000$ & $1000$ & No action \\
+        $ t4 $ & $1011$ & \color{red}{$1011$} & \color{red}{$1011$} & MOV \{R2,R3\},R1 \\
+        \hline
+    \end{tabular}\end{center}
+
+    }
+
+    \subsubsection{8.17 \textnormal{ Given dseign of logical circuit: }}
+    \noindent{1.List state sequence of the circuit, with initial state 0110}
+    {\color{hwSolution}
+
+    \begin{center}\begin{tabular}{|c|cccc|c|}
+        \hline
+        $ CP $ & $Q_0$ & $Q_1$ & $Q_2$ & $Q_3$ & Note
+        \\
+        \hline
+        $ 0 $ & $0$ & $1$ & $1$ & $0$ & Initial \\
+        $ 1 $ & $0$ & $0$ & $1$ & $1$ & $\rightarrow$ \\
+        $ 2 $ & $1$ & $0$ & $0$ & $1$ & $\rightarrow$\\
+        $ 3 $ & $1$ & $1$ & $0$ & $0$ & $\rightarrow$\\
+        $ 4 $ & $0$ & $1$ & $1$ & $0$ & Repeat $CP_0$\\
+        \hline
+    \end{tabular}\end{center}
+
+    }
+
+    \noindent{2.List the output secquence of L}
+    {\color{hwSolution}
+
+    \begin{center}\begin{tabular}{|c|cccc|c|c|}
+        \hline
+        $ CP $ & $Q_0$ & $Q_1$ & $Q_2$ & $Q_3$ & $D_{Selected}$ & Y
+        \\
+        \hline
+        $ 0 $ & $0$ & $1$ & $1$ & $0$ & $D_{3}$ & 0 \\
+        $ 1 $ & $0$ & $0$ & $1$ & $1$ & $D_{1}$ & 1 \\
+        $ 2 $ & $1$ & $0$ & $0$ & $1$ & $D_{4}$ & 0 \\
+        $ 3 $ & $1$ & $1$ & $0$ & $0$ & $D_{6}$ & 0 \\
+        \hline
+    \end{tabular}\end{center}
 
     }
