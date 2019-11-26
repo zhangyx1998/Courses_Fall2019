@@ -1,22 +1,46 @@
-\section{Session 7 - D/A and A/D converter}
+\section{Session 7 - Memory, D/A and A/D Converter}
 \vspace{-15pt}\noindent\rule{\textwidth}{0.1pt}\vspace{-10pt}
     \subsection*{Session 7 Homework}
-    \subsubsection{10.2 \textnormal{}.}
+    \subsubsection{10.2 \textnormal{Bulid a RAM of 4096 Byte with 8 pieces of 1024*4b RAM and a 2-4 decoder}.}
     {\color{hwSolution}
+        \input{../Session7/FIG1_1.tex}
+    }
+
+    \subsubsection{10.6 \textnormal{Analyze simple memory system}.}
+    {\color{hwSolution}
+
+    One of the memory chip works when:
+    \begin{align*}
+        M/\bar{I}O &= 1\\
+        WR = 1~~~o&r~~~RD = 1\\
+        (And,~of~~course)~&~when~~address~~is~~valid
+    \end{align*}
+
+    The valid addresses are:
+    \begin{center}
+        0x00000 $\sim$ 0x00FFF
+    \end{center}
 
     }
 
-    \subsubsection{10.6 \textnormal{}.}
+    \subsubsection{11.3 \textnormal{Circuit Design}.}
     {\color{hwSolution}
-
+        \input{../Session7/FIG3_1.tex}
     }
 
-    \subsubsection{11.3 \textnormal{}.}
+    \subsubsection{11.12 \textnormal{ADC circuit design principles}.}
     {\color{hwSolution}
 
-    }
+        Levels of measurement:
+        \[
+            2^N \geq \frac{400}{0.1}
+        \]\[
+            N_{min} = 12
+        \]
 
-    \subsubsection{11.12 \textnormal{}.}
-    {\color{hwSolution}
+        Maximun converting time:
+        \[
+            T_{max} = \frac{1\,s}{32} = 31.25\,ms
+        \]
 
     }

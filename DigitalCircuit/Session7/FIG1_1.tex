@@ -1,0 +1,53 @@
+\begin{center}\begin{tikzpicture}
+    \def \HFH{10}
+    \coordinate (DATA) at (5, 0);
+    \draw[black]
+        \foreach \x in {0,...,7}{
+            (DATA)+({\x * 0.2},\HFH)--+({\x * 0.2},-\HFH)
+        }
+        (DATA)+(0.0,\HFH) node[above,left]{$D_7$}
+        (DATA)+(1.4,\HFH) node[above,right]{$D_0$};
+    \coordinate (ADDR) at (0, 0);
+    \draw[black]
+        \foreach \x in {2,...,11}{
+            (ADDR)+({\x * 0.1},\HFH)--+({\x * 0.1},-\HFH)
+        }
+        (ADDR)+(0.0,\HFH) node[above,left]{$A_{11}$}
+        (ADDR)+(1.1,\HFH) node[above,right]{$A_0$};
+    % 24 Decoder
+    \coordinate (C0) at (-4, 0);
+    \draw[hwSolution,thick]
+        (C0)+(-1,1.6) -- +(1,1.6) -- +(1,-1.6) -- +(-1,-1.6) -- cycle;
+    \draw[black]
+        (C0)+(-1.0, 0.8) node[right]{$A_0$} -- +(-1.4, 0.8)
+        (C0)+(-1.0,-0.8) node[right]{$A_1$} -- +(-1.4,-0.8)
+        (C0)+(-1.4, 0.8) -- +(-1.4,{\HFH-1.5}) -- (0.1,{\HFH-1.5}) -- (0.1,\HFH)
+        (C0)+(-1.4,-0.8) -- +(-1.5,-0.8) -- +(-1.5,{\HFH-1.4}) -- (0.0,{\HFH-1.4}) -- (0.0,\HFH);
+    \draw[hwSolution,thick,o-*] (C0)+( 1.0, 1.2) node[left] {$Y_0$} -- +( 1.4, 1.2) --  (-2.4, 1.2) -- (-2.4, 6.7) -- (-0.9, 6.7);
+    \draw[hwSolution,thick,o-*] (C0)+( 1.0, 0.4) node[left] {$Y_1$} -- +( 1.4, 0.4) --  (-2.0, 0.4) -- (-2.0, 1.9) -- (-0.9, 1.9);
+    \draw[hwSolution,thick,o-*] (C0)+( 1.0,-0.4) node[left] {$Y_2$} -- +( 1.4,-0.4) --  (-2.0,-0.4) -- (-2.0,-2.9) -- (-0.9,-2.9);
+    \draw[hwSolution,thick,o-*] (C0)+( 1.0,-1.2) node[left] {$Y_3$} -- +( 1.4,-1.2) --  (-2.4,-1.2) -- (-2.4,-7.7) -- (-0.9,-7.7);
+
+    \foreach \Chip in {0,...,7}{
+        \def \DWXSHIFT {2}
+        \ifodd\Chip \def \DWXSHIFT{2.8} \fi
+        \coordinate (C\Chip) at (3, {(3.5-\Chip)*2.4});
+        \draw[hwSolution,thick]
+            (C\Chip)+(-0.8,1) -- +(0.8,1) -- +(0.8,-1) -- +(-0.8,-1) -- cycle;
+        \draw[black]
+            (C\Chip)+(-0.9,0.8) node(A9C\Chip)[right]{$_{A_9}$}
+            (C\Chip)+(-0.9,0.1) node(A0C\Chip)[right]{$_{A_0}$}
+            \foreach \ADDRWIRE in {0,...,9}{
+                (C\Chip)+(-0.8,{1 - 0.1*(1+\ADDRWIRE)}) -- +({\ADDRWIRE*0.1 - 2.8},{1 - 0.1*(1+\ADDRWIRE)})
+            }
+            \foreach \DATAWIRE in {0,...,3}{
+                (C\Chip)+( 0.8,{0.3-0.2*\DATAWIRE}) node[left,xshift = 3]{$_{_{D_\DATAWIRE}}$} -- +({\DATAWIRE*-0.2 + 0.6 + \DWXSHIFT},{0.3-0.2*\DATAWIRE})
+            };
+        \draw[black,dotted,thick]
+            (A9C\Chip) -- (A0C\Chip);
+        \draw[hwSolution,thick,o-]
+            (C\Chip)+(-0.8,-0.5) node[right,xshift = -2]{$_{\overline{CS}}$}
+            --+(-4,-0.5)
+            \ifodd\Chip --+(-4,1.9) \fi;
+    }
+\end{tikzpicture}\end{center}

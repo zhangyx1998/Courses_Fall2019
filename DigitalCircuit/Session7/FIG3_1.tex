@@ -1,0 +1,56 @@
+\begin{center}\begin{tikzpicture}
+% 74LS163 CHIP
+    \coordinate (74LS163) at (-4.2, 0);
+    \draw[hwSolution,thick]
+        (74LS163)
+        +( 0.0,1.6) node[above]{\small{74LS163}}
+        +(-1.2,1.6) -- +(1.2,1.6) -- +(1.2,-1.6) -- +(-1.2,-1.6) -- cycle
+        (74LS163)
+        +( 1.2, 1.2) node(QA)[left ] {$_{Q_A}$}
+        +( 1.2, 0.6) node(QB)[left ] {$_{Q_B}$}
+        +( 1.2, 0.0) node(QC)[left ] {$_{Q_C}$}
+        +( 1.2,-0.6) node(QD)[left ] {$_{Q_D}$}
+        +( 1.2,-1.2) node(CL)[left ] {$_{\overline{C_L}}$}
+        +(-1.2, 1.2) node(DA)[right] {$_{D_A}$}
+        +(-1.2, 0.6) node(DB)[right] {$_{D_B}$}
+        +(-1.2, 0.0) node(DC)[right] {$_{D_C}$}
+        +(-1.2,-0.6) node(DD)[right] {$_{D_D}$}
+        +(-1.2,-1.2) node(LD)[right] {$_{\overline{LD}}$}
+        +( 0.0,-1.6) node(CP)[above] {$_{CP}$}
+    ;
+    \coordinate (ADC) at (1.8,0.3);
+    \draw[hwSolution,thick]
+        (ADC)
+        +( 0.0,1.4) node[above]{\small{DAC}}
+        +(-0.8,1.4) -- +(0.8,1.4) -- +(0.8,-1.4) -- +(-0.8,-1.4) -- cycle
+        (ADC)
+        +(-0.8, 0.9) node(IA)[right] {$_{Q_A}$}
+        +(-0.8, 0.3) node(IB)[right] {$_{Q_B}$}
+        +(-0.8,-0.3) node(IC)[right] {$_{Q_C}$}
+        +(-0.8,-0.9) node(ID)[right] {$_{Q_D}$}
+        +( 0.8, 0.0) node(Y) [left ] {$_{Y}$}
+    ;
+    \coordinate (NOTGATE) at (-0.9,-1.2);
+    \draw[hwSolution,thick]
+        (NOTGATE)+(0.6,0.3) -- +(0.6,-0.3) -- +(-0.6,-0.3) -- +(-0.6,0.3) -- cycle
+        (NOTGATE)node{$\&$};
+    % Wire
+    \draw[hwSolution,thick,o-](Y)--+(1.6,0) node[right]{$_{Q_{OUT}}$};
+    \draw[hwSolution,thick]
+        (DA) -- ++(-1.0,0)
+        (DB) -- ++(-1.0,0)
+        (DC) -- ++(-1.0,0)
+        (DD) -- ++(-1.0,0)
+        (LD) -- ++(-0.8,0) node[left]{$_{V_{CC}}$}
+        (CP) -- ++( 0.0,-0.6) -- +(-1.6,0) node[left]{$_{CP}$}
+        (QA) -- (IA)
+        (QB) -- (IB)
+        (QC) -- (IC)
+        (QD) -- (ID)
+    ;
+    \draw[hwSolution,thick,-|] (DD) ++ (-1,0) -- +(0,2.4);
+    \draw[hwSolution,thick,-*] (NOTGATE) ++ (-0.3,0.3) -- +(0,0.4);
+    \draw[hwSolution,thick,-*] (NOTGATE) ++ ( 0.0,0.3) -- +(0,1.6);
+    \draw[hwSolution,thick,-*] (NOTGATE) ++ ( 0.3,0.3) -- +(0,2.2);
+    \draw[hwSolution,thick,o-] (NOTGATE) ++ (-0.6,0.0) -- (CL);
+\end{tikzpicture}\end{center}
