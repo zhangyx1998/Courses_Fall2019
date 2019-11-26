@@ -1,41 +1,46 @@
 \begin{center}\begin{tikzpicture}
-    \draw[black,thick,->] (-0.5,0) -- (10,0) node[below]{$t$};
-    \draw[black,thick,->] (0,-0.5) -- ( 0,3.5) node[left]{$u_I$};
-    \draw[black,dash pattern={on 0.2cm off 0.2cm}]
-    (0,1) node[left]{$U_{T-}$} -- (9.5,1)
-    (0,2) node[left]{$U_{T+}$} -- (9.5,2);
-    \draw[gray,thick] plot[smooth] coordinates{
-    (0,0)
-    (0.5,2.0) %N1
-    (0.7,2.2)
-    (1.1,1.8)
-    (1.4,2.1)
-    (1.6,1.8)
-    (1.9,2.1)
-    (2.2,1.0) %N2
-    (2.3,0.0)
-    (2.8,1.0)
-    (3.0,1.3)
-    (3.3,1.4)
-    (3.5,0.8)
-    (3.7,1.2)
-    (4.1,0.7)
-    (4.6,2.0) %N3
-    (5.1,2.3)
-    (5.3,1.8)
-    (5.5,1.8)
-    (5.9,2.6)
-    (6.2,1.0) %N4
-    (6.6,0.0)
-    (7.0,1.3)
-    (7.6,0.8)
-    (7.9,1.3)
-    (8.4,0.8)
-    (9.0,1.2)};
-    \draw[hwSolution,thick](0,0.5) node[left,hwSolution]{$u_0$}
-    -- (0.5,0.5) -- (0.5,2.5)
-    -- (2.2,2.5) -- (2.2,0.5)
-    -- (4.6,0.5) -- (4.6,2.5)
-    -- (6.2,2.5) -- (6.2,0.5)
-    -- (9.0,0.5);
+    \draw[hwSolution,thick](-1.2,1.0) node[left,hwSolution]{$u_1$}
+        -- ( 0.0,1.0) -- ( 0.0,1.6)
+        -- ( 8.0,1.6) -- ( 8.0,1.0)
+        -- (12.3,1.0) -- (12.3,1.6)
+        -- (13.3,1.6) node[right]{$\dots$};
+    \draw[hwSolution,thick](-1.2,0.0) node[left,hwSolution]{$u_2$}
+        \foreach \x in {0,...,5}{
+            -- ({1.23 * \x},0.0)
+            -- ({1.23 * \x},0.6)
+            -- ({1.23 * \x + 0.8 },0.6)
+            -- ({1.23 * \x + 0.8 },0.0)
+        }
+        -- ({1.23 * 6},0.0) -- ({1.23 * 6},0.6)
+        -- ( 8.0,0.6) -- ( 8.0,0.0)
+        -- (12.3,0.0) -- (12.3,0.6)
+        -- (13.1,0.6) -- (13.1,0.0)
+        -- (13.3,0.0) node[right]{$\dots$};
+    \draw[red,dash pattern={on 1pt off 1pt}]( 8.0,0.6)
+    -- ({1.23 * 6 + 0.8 },0.6)
+    -- ({1.23 * 6 + 0.8 },0.0);
+    \draw[black,->,thick] (-1.2,-0.5) -- (14.0,-0.5)
+        node[below right]{$t$};
+    \foreach \x in {0,...,7}{
+        \draw[black,thick] ({1.23 * \x},-0.5)
+        -- ({1.23 * \x},-0.35);
+    }
+    \foreach \x in {0,...,6}{
+        \draw[gray,thick,dash pattern={on 2pt off 3pt}] ({1.23 * \x},-0.4)
+        -- ({1.23 * \x},1.6);
+    }
+    \foreach \x in {0,1}{
+        \draw[black,thick] ({1.23 * \x + 12.3},-0.5) 
+        -- ({1.23 * \x + 12.3},-0.35);
+    }
+    \draw[gray,thick,dash pattern={on 2pt off 3pt}]
+    (12.3,-1.4) -- (12.3, 1.6)
+    (0.0,-1.4) -- ( 0.0,-1.15)
+    (8.0,1.0) -- (8.0,0.6);
+    \usetikzlibrary{snakes}
+    \draw[hwSolution,snake = brace,thick] (1.23,-0.6)--(0,-0.6)
+    (0.615,-0.7) node[below]{${T_2 = 0.438\,ms}$};
+    \draw[hwSolution,snake = brace,thick] (12.3,-1.5)--(0,-1.5)
+    (6.15,-1.6) node[below]{${T_1 = 4.38\,ms}$};
+
 \end{tikzpicture}\end{center}
