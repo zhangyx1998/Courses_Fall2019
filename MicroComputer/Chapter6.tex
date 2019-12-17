@@ -1,0 +1,27 @@
+\section{Chapter6 - Basic I/O Technologies}
+\vspace{-15pt}\noindent\rule{\textwidth}{0.1pt}\vspace{-10pt}
+    \subsection*{Chapter 6 Homework}
+    \subsubsection{\textnormal{用流程图描述从中断请求到中断返回的中断响应的一般过程.说明整个过程中哪些由硬件实现？哪些由程序员用软件实现？}.}
+    \subsubsection{\textnormal{已知$SP=0100H,~~SS=3500H,~~CS=9000H,~~IP=0200H,~~[00020H]=7FH,~~[00021H]=1AH,~~[00022H]=07H,~~[00023H]=6CH$,在地址为90200H开始的连续两个单元中存放一条两字节指令INT 8.\\试指出在执行该指令并进入相应的中断服务子程序时:\\
+    $
+        SP=(
+            {\color{hwSolution}0000H}
+        ),~~~~
+        SS=(
+            {\color{hwSolution}0000H}
+        ),~~~~
+        IP=(
+            {\color{hwSolution}0000H}
+        ),~~~~
+        CS=(
+            {\color{hwSolution}0000H}
+        ).
+    $\\
+    SP所指向的字单元的内容是$(
+        {\color{hwSolution}0000H}
+    )$.
+    }}
+
+    \subsubsection{\textnormal{某输入输出系统采用查询方式进行数据传送,数据端口地址位205H,状态端口地址为206H,外设状态信息通过D0传送到系统中,"0"表示外设忙,"1"表示外设准备好.现利用三态门作为状态端口,利用74LS273芯片作为8位数据端口.设计两个端口与系统的连接电路图,并编写实现将内存缓冲区(buffer)中的50个字节数据输出(请以完整的汇编语言源程序结构编写该程序)}.}
+    
+    \subsubsection{\textnormal{完成PPT上"简易家庭安防系统"控制程序设计}.}
